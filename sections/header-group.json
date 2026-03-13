@@ -62,10 +62,10 @@
           "settings": {
             "menu": "menu-header-sx",
             "color_scheme": "",
-            "type_font_primary_size": "0.625rem",
+            "type_font_primary_size": "0.75rem",
             "menu_font_style": "regular",
             "type_font_primary_link": "body",
-            "type_case_primary_link": "none",
+            "type_case_primary_link": "uppercase",
             "menu_style": "featured_products",
             "featured_products_aspect_ratio": "4 / 5",
             "featured_collections_aspect_ratio": "16 / 9",
@@ -84,7 +84,7 @@
           "settings": {
             "menu": "menu-header-dx",
             "color_scheme": "",
-            "type_font_primary_size": "0.625rem",
+            "type_font_primary_size": "0.75rem",
             "menu_font_style": "regular",
             "type_font_primary_link": "body",
             "type_case_primary_link": "none",
