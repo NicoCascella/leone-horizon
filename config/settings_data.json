@@ -83,8 +83,8 @@
         "settings": {
           "background": "#f7f4f0",
           "foreground_heading": "#645145",
-          "foreground": "#000000",
-          "primary": "#000000",
+          "foreground": "#645145",
+          "primary": "#645145",
           "primary_hover": "#645145",
           "border": "#0000000f",
           "shadow": "#000000",
