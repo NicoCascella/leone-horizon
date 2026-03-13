@@ -146,19 +146,45 @@
             "padding-inline-end": 48
           },
           "blocks": {
-            "text_mFtybf": {
+            "text_Hd3cBf": {
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<h2>Bestseller</h2>",
+                "text": "<h2>PASTICCERIA ARTIGIANALE</h2>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
-                "type_preset": "rte",
+                "type_preset": "custom",
                 "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
+                "font_size": "0.75rem",
+                "line_height": "tight",
                 "letter_spacing": "normal",
+                "case": "uppercase",
+                "wrap": "pretty",
+                "color": "var(--color-foreground-heading)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_YDQDrT": {
+              "type": "text",
+              "name": "t:names.heading",
+              "settings": {
+                "text": "<h2>L'arte della <br/>pasticceria</h2>",
+                "width": "fit-content",
+                "max_width": "narrow",
+                "alignment": "left",
+                "type_preset": "custom",
+                "font": "var(--font-heading--family)",
+                "font_size": "7.5rem",
+                "line_height": "normal",
+                "letter_spacing": "loose",
                 "case": "none",
                 "wrap": "pretty",
                 "color": "var(--color-foreground)",
@@ -172,10 +198,10 @@
               },
               "blocks": {}
             },
-            "text_J6TTqg": {
+            "text_XPJ7ex": {
               "type": "text",
               "settings": {
-                "text": "<p>Scopri i bestseller che hanno conquistato i nostri clienti con il loro mix perfetto di funzionalità e stile.</p>",
+                "text": "<p>Dolci artigianali creati con ingredienti selezionati e passione autentica</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -196,26 +222,12 @@
                 "padding-inline-end": 0
               },
               "blocks": {}
-            },
-            "button_wdAmgU": {
-              "type": "button",
-              "settings": {
-                "label": "Acquista ora",
-                "link": "shopify://collections/all",
-                "open_in_new_tab": false,
-                "style_class": "button",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
-              },
-              "blocks": {}
             }
           },
           "block_order": [
-            "text_mFtybf",
-            "text_J6TTqg",
-            "button_wdAmgU"
+            "text_Hd3cBf",
+            "text_YDQDrT",
+            "text_XPJ7ex"
           ]
         }
       },
