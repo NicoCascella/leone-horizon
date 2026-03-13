@@ -244,7 +244,7 @@
         "corner_radius": 0,
         "slide_height": "medium",
         "content_position": "on-media",
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "icons_style": "arrows_large",
         "icons_shape": "circle",
         "slideshow_controls_style": "none",
