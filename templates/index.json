@@ -593,7 +593,7 @@
             "align_baseline": false,
             "horizontal_alignment_flex_direction_column": "flex-start",
             "vertical_alignment_flex_direction_column": "flex-start",
-            "gap": 0,
+            "gap": 15,
             "width": "fill",
             "custom_width": 100,
             "width_mobile": "fill",
@@ -622,15 +622,28 @@
             "padding-inline-end": 0
           },
           "blocks": {
-            "divider_jX7WPd": {
-              "type": "_divider",
-              "name": "t:names.divider",
+            "text_pD6XPh": {
+              "type": "text",
               "settings": {
-                "thickness": 2,
-                "corner_radius": "square",
-                "width_percent": 31,
+                "text": "<p>Come funziona</p>",
+                "width": "fit-content",
+                "max_width": "narrow",
+                "alignment": "left",
+                "type_preset": "custom",
+                "font": "var(--font-body--family)",
+                "font_size": "0.875rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "uppercase",
+                "wrap": "pretty",
+                "color": "var(--color-foreground-heading)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
                 "padding-block-start": 0,
-                "padding-block-end": 0
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
               },
               "blocks": {}
             },
@@ -663,7 +676,7 @@
             "text_Edm66t": {
               "type": "text",
               "settings": {
-                "text": "<p>Realizzato con cura e amato incondizionatamente dai nostri clienti, questo bestseller supera ogni aspettativa.</p>",
+                "text": "<p>Compila il modulo e ti contatteremo entro 24 ore per discutere ogni dettaglio del tuo evento.</p>",
                 "width": "fit-content",
                 "max_width": "narrow",
                 "alignment": "left",
@@ -679,7 +692,57 @@
                 "background_color": "#00000026",
                 "corner_radius": 0,
                 "padding-block-start": 0,
+                "padding-block-end": 15,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_ijMYrE": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Orari di apertura</p>",
+                "width": "fit-content",
+                "max_width": "narrow",
+                "alignment": "left",
+                "type_preset": "custom",
+                "font": "var(--font-body--family)",
+                "font_size": "0.875rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "uppercase",
+                "wrap": "pretty",
+                "color": "var(--color-foreground-heading)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
                 "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_H4YbMN": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Lun–Sab: 8:00–19:00 / Dom: 9:00–13:00</p>",
+                "width": "fit-content",
+                "max_width": "narrow",
+                "alignment": "left",
+                "type_preset": "custom",
+                "font": "var(--font-body--family)",
+                "font_size": "0.875rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-primary)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 15,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
               },
@@ -687,9 +750,11 @@
             }
           },
           "block_order": [
-            "divider_jX7WPd",
+            "text_pD6XPh",
             "text_Y8A7cH",
-            "text_Edm66t"
+            "text_Edm66t",
+            "text_ijMYrE",
+            "text_H4YbMN"
           ]
         },
         "contact_form_YKRHrM": {
