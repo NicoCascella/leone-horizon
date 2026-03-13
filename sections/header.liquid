@@ -59,6 +59,12 @@
     content_for 'block', type: '_header-menu', id: 'header-menu', variant: 'navigation_bar', transparent: transparent
   endcapture
 
+  capture secondary_menu
+    if section.settings.secondary_menu != blank
+      content_for 'block', type: '_header-menu', id: 'secondary-menu', menu: section.settings.secondary_menu, class: 'secondary-menu'
+    endif
+  endcapture
+
   capture actions
     render 'header-actions', customer_account_menu: section.settings.customer_account_menu, display_style: section.settings.actions_display_style, section: section
   endcapture
@@ -68,7 +74,13 @@
   endif
 
   # Handle localization positioning
-  if section.settings.localization_position == 'left'
+  if section.settings.logo_position == 'logo_center_menu_left'
+    if shop.customer_accounts_enabled
+      assign order = 'drawer_search,menu,logo,localization,secondary_menu,search,actions'
+    else
+      assign order = 'menu,logo,localization,secondary_menu,search,drawer_search,actions'
+    endif
+  elsif section.settings.localization_position == 'left'
     if section.settings.search_position == 'left'
       if shop.customer_accounts_enabled
         assign order = 'drawer_search,logo,search,localization,menu,actions'
@@ -149,6 +161,7 @@
   endif
 
   assign class = 'header'
+  assign class = class | append: ' header-logo-position-' | append: section.settings.logo_position | replace: '_', '-'
 
   if transparent_color_scheme
     assign class = class | append: ' ' | append: transparent_color_scheme
@@ -365,6 +378,7 @@
         first: first,
         logo: logo,
         menu: menu,
+        secondary_menu: secondary_menu,
         actions: actions,
         localization: localization_markup,
         search: search,
@@ -426,12 +440,13 @@
     }
   }
 
-  #header-component :is(.header-menu, .dropdown-localization) {
+  #header-component :is(.header-menu, .dropdown-localization, .secondary-menu, [id^="secondary-menu"]) {
     display: none;
   }
 
   @media screen and (min-width: 750px) {
-    #header-component[data-menu-style='menu'] :is(.header-menu, .dropdown-localization) {
+    #header-component[data-menu-style='menu'] :is(.header-menu, .dropdown-localization, .secondary-menu),
+    #header-component.header-logo-position-logo-center-menu-left[data-menu-style='menu'] :is(.header-menu, .dropdown-localization, .secondary-menu, .secondary-menu-wrapper, [id^="secondary-menu"]) {
       display: flex;
     }
   }
@@ -745,6 +760,14 @@
       --header-center: auto;
       --header-left: minmax(max-content, 1fr);
       --header-right: minmax(max-content, 1fr);
+    }
+
+    /* If menu is in left column and logo is in center */
+    &:has(.header-logo-position-logo-center-menu-left .header__column--left header-menu),
+    &:has(.header-logo-position-logo-center-menu-left .header__column--left .header-menu) {
+      --header-center: auto;
+      --header-left: 1fr;
+      --header-right: 1fr;
     }
 
     /* If there is no center column, make the column the menu is in grow eagerly */
@@ -1143,6 +1166,10 @@
         {
           "value": "right",
           "label": "t:options.right"
+        },
+        {
+          "value": "logo_center_menu_left",
+          "label": "t:options.logo_center_menu_left"
         }
       ],
       "default": "center"
@@ -1150,6 +1177,12 @@
     {
       "type": "header",
       "content": "t:content.menu"
+    },
+    {
+      "type": "link_list",
+      "id": "secondary_menu",
+      "label": "t:settings.secondary_menu",
+      "info": "t:info.secondary_menu_info"
     },
     {
       "type": "select",
