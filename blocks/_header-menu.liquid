@@ -54,9 +54,15 @@
   {% else %}
     {% liquid
       assign block_settings = block.settings
+      if menu != blank
+        assign block_settings = block_settings | m_merge: 'menu', menu
+      endif
+      assign color_scheme_classes = ''
+      if is_secondary
+        assign color_scheme_classes = color_scheme_classes | append: ' secondary-menu'
+      endif
       assign menu_content_type = block_settings.menu_style | default: 'text'
       assign image_border_radius = block_settings.image_border_radius
-      assign color_scheme_classes = ''
       assign color_scheme_setting_id = 'color_scheme_' | append: section.settings.menu_row
       assign current_color_scheme = block_settings.color_scheme
       assign parent_color_scheme = section.settings[color_scheme_setting_id]

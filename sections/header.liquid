@@ -61,7 +61,7 @@
 
   capture secondary_menu
     if section.settings.secondary_menu != blank
-      content_for 'block', type: '_header-menu', id: 'secondary-menu', menu: section.settings.secondary_menu, class: 'secondary-menu'
+      content_for 'block', type: '_header-menu', id: 'secondary-menu', menu: section.settings.secondary_menu, is_secondary: true
     endif
   endcapture
 
